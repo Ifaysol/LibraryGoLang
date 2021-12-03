@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <p>{{.Message}}</p>
+    <br>
+    <form method="post" action="/login/check">
+        <label>Username</label>
+        <br>
+        <input name="Username" type="text" value="{{.Username}}">
+        <br>
+        <p>{{.Errors.Username}}</p>
+        <br>
+        <label>Password</label>
+        <br>
+        <input name="Password" type="password" value="">
+        <br>
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>

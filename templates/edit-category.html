@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@tailwindcss/custom-forms@0.2.1/dist/custom-forms.css" rel="stylesheet"/>
+    <title>Edit Category</title>
+</head>
+<body>
+    <div class="">
+
+    </div>
+</body>
+</html>
+        
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap -mx-4">
+                <div class="px-4 border-2 w-5/12 py-8">
+                    <form method = "post" action = "/categories/{{.Category.ID}}/update">
+                        <label>Category Name:</label>
+                        <br>
+                        <div class="py-2">
+                            <input class="border " name="CategoryName" type="text" value="{{.Category.CategoryName}}"/>
+                        </div>
+                        <br>
+                        <p>{{.Errors.CategoryName}}</p>
+                        <br>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" type="submit">
+                            Update Category
+                        </button>
+                    </form> 
+                </div>  
+            </div>
+        </div>
+                   
+           

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@tailwindcss/custom-forms@0.2.1/dist/custom-forms.css" rel="stylesheet"/>
+    <title>Create Book</title>
+</head>
+<body>
+    <div class="">
+
+    </div>
+</body>
+</html>
+        
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap -mx-4">
+                <div class="px-4 border-2 w-5/12 py-8">
+                    <form method = "post" action = "/books/store" enctype="multipart/form-data">
+                        <div>
+                            <label>Book Name:</label>
+                            <br>
+                            <div class="py-2">
+                                <input class="border " name="BookName" type="text" value="{{.Book.BookName}}"/>
+                            </div>
+                            <br>
+                            {{.Errors.BookName}}
+                        </div>
+                        
+                        <label class="block text-left" style="max-width: 400px">
+                            <span class="text-gray-700">Book Category:</span>
+                            <select class="form-select block w-full mt-1" name="CategoryID" id="catid">
+                                {{range .Category}}
+                                    <option value="{{.ID}}">{{.CategoryName}}</option>
+                                {{end}}
+                            </select>
+                        </label>
+                        <br>
+                        <input type="file" name="Image" value=""/>
+                        <br>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" type="submit">
+                            Create Book
+                        </button>
+                    </form> 
+                </div>  
+            </div>
+        </div>
+                   
+		    
+           

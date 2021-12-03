@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+</head>
+<body>
+
+    <div class="p-3">
+        <a class="bg-green-600" href="/books">Index</a>
+      </div>
+
+    <form action="/booking/store" method="Post">
+        <input type="hidden" name="User_id" value="1">
+        <input type="hidden" name="Book_id" value="{{.ID}}">
+        <label>Start time:</label>
+        <input type="datetime-local" name="S_time" value=""/>
+        <br>
+        <label>End time:</label>
+        <input type="datetime-local" name="E_time" value=""/>
+        <br>
+        
+        <!-- <p>{{.Errors.Name}}</p> -->
+       
+        <button type="submit"> Submit </button>
+    </form>    
+</body>
+</html>
